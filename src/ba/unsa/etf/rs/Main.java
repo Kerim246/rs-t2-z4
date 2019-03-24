@@ -1,21 +1,12 @@
 package ba.unsa.etf.rs;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
 
-    public static double funkcija(double []niz){
-        double max;
-        max=niz[0];
-        for(int i=0 ; i<niz.length ; i++){
-            if(niz[i]>max)
-                max=niz[i];
-        }
-
-        return max;
-    }
-
     public static double korijen(double []niz,double X){
+
         int brojac=0;
 
         double kor = Math.sqrt(X);
@@ -47,7 +38,7 @@ public class Main {
             niz[i] = ulaz.nextInt();
         }
 
-        double max = funkcija(niz);
+        double max = Arrays.stream(niz).max().getAsDouble();
 
         System.out.println("Broj članova niza koji su veći od korijena najvećeg člana niza iznosi: "+korijen(niz,max));
 
