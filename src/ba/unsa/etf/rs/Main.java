@@ -16,7 +16,6 @@ public class Main {
     }
 
     public static double korijen(double []niz,double X){
-        double korijen;
         int brojac=0;
 
         double kor = Math.sqrt(X);
